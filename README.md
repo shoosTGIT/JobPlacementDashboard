@@ -12,6 +12,7 @@ For the last two weeks of my time at the tech academy, I worked with my peers in
 ### Developing Travel Site
 So this site has a logo in the top left of the site, a nav element within the center ready to be linked to other sections of the site when ready. My tasks where to construct the whole site, front end and styling included.
 
+<!--
 <!DOCTYPE html>
 <html lang="en">
 
@@ -76,10 +77,11 @@ So this site has a logo in the top left of the site, a nav element within the ce
 </body>
 
 </html>
-
+-->
 ### Developing Recipe Site
 This site is a little more advanced on both deptarments, I again was tasked with constructing the whole site.
 
+<!--
 <!doctype html>
 <html lang="en">
 
@@ -112,7 +114,7 @@ This site is a little more advanced on both deptarments, I again was tasked with
         </ul>
     </ul>
     </nav>
-</div>
+    </div>
         <br>
         <br>
         <div class="heading">
@@ -120,9 +122,9 @@ This site is a little more advanced on both deptarments, I again was tasked with
             <p>Satisfy your cravings with our wide selection of simple and fast recipes. </p>
         </div>
 
-</head>
+      </head>
 
-<body>
+      <body>
     <div class="content1">
         <div class="container">
             <img src="../Foodery/images/salmon-bowl.jpg" alt="bowl of salmon">
@@ -182,15 +184,15 @@ This site is a little more advanced on both deptarments, I again was tasked with
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!--JAVASCRIPT LINK-->
     <script src="static/foodery.js"></script>
-</body>
+    </body>
 
-</html>
-
+    </html>
+    -->
 ### Front End Stlying
 For both projects css styling was absolutely necessary to reach the desired look of our projects.
 
 Here's a snippit for the first site,
-
+<!--
 :root{
     --main-color: #1E1E1E;
     font-family: sans-serif; /*Fallback font for old browsers */
@@ -269,8 +271,11 @@ h2 span {
     font-size: larger;
 }
 
+-->
+
 And snippit #2, 
 
+<!--
 #navbar {
     align-items: center;
     background-color: #f0f0f0;
@@ -371,6 +376,8 @@ And snippit #2,
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
+
+-->
 
 
 *Jump to: [Developing Travel Site](Developing-travel-site), [Developing Recipe Site](#Developing-recipe-site), [Page Top](#live-project)*

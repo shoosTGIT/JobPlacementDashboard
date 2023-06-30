@@ -12,7 +12,7 @@ For the last two weeks of my time at the tech academy, I worked with my peers in
 ### Developing Travel Site
 So this site has a logo in the top left of the site, a nav element within the center ready to be linked to other sections of the site when ready. My tasks where to construct the whole site, front end and styling included.
 
-<!--
+```
 <!DOCTYPE html>
 <html lang="en">
 
@@ -77,11 +77,11 @@ So this site has a logo in the top left of the site, a nav element within the ce
 </body>
 
 </html>
--->
+```
 ### Developing Recipe Site
 This site is a little more advanced on both deptarments, I again was tasked with constructing the whole site.
 
-<!--
+```
 <!doctype html>
 <html lang="en">
 
@@ -187,12 +187,12 @@ This site is a little more advanced on both deptarments, I again was tasked with
     </body>
 
     </html>
-    -->
+```
 ### Front End Stlying
 For both projects css styling was absolutely necessary to reach the desired look of our projects.
 
 Here's a snippit for the first site,
-<!--
+```
 :root{
     --main-color: #1E1E1E;
     font-family: sans-serif; /*Fallback font for old browsers */
@@ -271,11 +271,11 @@ h2 span {
     font-size: larger;
 }
 
--->
+```
 
 And snippit #2, 
 
-<!--
+```
 #navbar {
     align-items: center;
     background-color: #f0f0f0;
@@ -377,7 +377,7 @@ And snippit #2,
     transition: background-color 0.3s ease;
 }
 
--->
+```
 
 
 *Jump to: [Developing Travel Site](Developing-travel-site), [Developing Recipe Site](#Developing-recipe-site), [Page Top](#live-project)*

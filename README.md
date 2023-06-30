@@ -3,10 +3,13 @@
 ## Introduction
 For the last two weeks of my time at the tech academy, I worked with my peers in a team developing a few different sites in order to achieve a grander, more diverse webpage in HTML, CSS, and JavaScript. Working on a legacy codebase was a great learning oppertunity for fixing bugs, cleaning up code, and adding requested features. There were some big changes that could have been a large time sink, but we used what we had to deliver what was needed on time. I saw how a good developer works with what they have to make a quality product. I worked on [front end stories](#front-end-stories) that I'm quite fond of. Because much of the site had already been built, but not styled. I had to work and develop [front end styling](#front-end-styling) that had me stumped for a little bit. But like all the code stories provided and all of varying degrees of difficulty, nothing a little reset and different perspective to get the coding juices flowing. Everyone on the team had their own work and experiance to bring to the table, which really helped open up our code discussions at the end of the week.
 
-##Front End Stories
+## Front End Stories
 * [Developing Travel Site](#Developing-travel-site)
 * [Developing Recipe Site](#Developing-recipe-site)
-* [Front End Styling](#front-end-styling)
+* [Front End Styling](#Front-End-Styling)
+
+## Back End Stories
+* [Developing Functions and Buttons](#Developing-Functions-and-Buttons)
 
 
 ### Developing Travel Site
@@ -378,6 +381,88 @@ And snippit #2,
 }
 
 ```
+### Developing Functions and Buttons
+For both my sites I was tasked with developing certain like button counters and functions for dropdown menus, snippits of both will be providied below.
 
+```
+function toggleDropdown() {
+    var dropdownList = document.getElementById("searchDropdown");
+    dropdownList.style.display = (dropdownList.style.display === "none") ? "block" : "none";
+}
 
+var isMobile = /iPhone|iPad|iPod|Android|webOS|Blackberry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+if (isMobile) {
+    document.getElementById("mobileContent").style.display = "block";
+}
+```
+
+Snippit #2,
+```
+window.onscroll = function() {
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky");
+    } else {
+        navbar.classList.remove("sticky");
+    }
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+    var dropdownToggle = document.querySelectorAll('.dropdown-toggle');
+
+    dropdownToggle.forEach(function(toggle) {
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            var dropdownMenu = this.nextElementSibling;
+            dropdownMenu.classList.toggle('show');
+        });
+    });
+});
+
+var likeButton = document.getElementById('like-button');
+var likeCounter = document.getElementById('like-counter');
+var count = 0;
+
+likeButton.addEventListener('click', function() {
+    count++;
+    likeCounter.textContent = count;
+});
+
+var newsletterForm = document.getElementById('newsletter-form');
+
+newsletterForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var emailInput = document.getElementById('email-input');
+    var email = emailInput.ariaValueMax;
+
+    //Show sucesss popup
+    var sucesssPopup = document.createElement('div');
+    sucesssPopup.classList.add('success-popup');
+    sucesssPopup.innerHTML = '<h3>Success!</h3><p>You are now subscribed to our newsletter!</p>';
+
+    newsletterForm.reset();
+    newsletterForm.parentNode.replaceChild(sucesssPopup, newsletterForm);
+
+    setTimeout(function() {
+        sucesssPopup.parentNode.removeChild(sucesssPopup);
+    }, 3000);
+});
+
+$(document).ready(function() {
+    $(window).scroll(function() {
+        var scrollPos = $(window).scrollTop();
+        var navbar = $('.navbar');
+
+        if (scrollPos > 0) {
+            navbar.stop().animate({ height: '70px'}, 300);
+        } else {
+            navbar.stop().animate({height: '100px'}, 300);
+        }
+    });
+});
+```
 *Jump to: [Developing Travel Site](Developing-travel-site), [Developing Recipe Site](#Developing-recipe-site), [Page Top](#live-project)*
